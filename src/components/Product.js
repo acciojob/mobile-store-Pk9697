@@ -7,7 +7,7 @@ function Product({ product = {} }) {
 			<img src={product.image} alt={product.title} />
 			<h5>{product.title}</h5>
             <p>Price: ${product.price}</p>
-            <Link to={`/products/${product.id}`}>Buy</Link>
+            <Link className='btn' to={`/products/${product.id}`}>Buy</Link>
 		</div>
 	)
 }
