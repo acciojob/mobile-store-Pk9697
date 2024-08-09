@@ -13,7 +13,9 @@ const App = () => {
 	useEffect(() => {
 		fetch('https://fakestoreapi.com/products/category/electronics')
 			.then((res) => res.json())
-			.then((data) => setProducts(data))
+			.then((data) =>
+				setProducts(data.map((product, idx) => ({ ...product, id: idx + 1 })))
+			)
 	}, [])
 
 	const updateProducts = (productId, formData = {}) => {
@@ -24,11 +26,9 @@ const App = () => {
 		)
 	}
 
-	const deleteProduct=(id)=>{
+	const deleteProduct = (id) => {
 		setProducts((prevProducts) =>
-			prevProducts.filter((product) =>
-				product.id !== id
-			)
+			prevProducts.filter((product) => product.id !== id)
 		)
 	}
 
@@ -47,7 +47,11 @@ const App = () => {
 					<Route
 						path='/admin/products/:productId'
 						element={
-							<Edit products={products} updateProducts={updateProducts} deleteProduct={deleteProduct} />
+							<Edit
+								products={products}
+								updateProducts={updateProducts}
+								deleteProduct={deleteProduct}
+							/>
 						}
 					/>
 				</Routes>
