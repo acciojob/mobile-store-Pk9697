@@ -26,7 +26,7 @@ function Edit({ products = [], updateProducts, deleteProduct }) {
 
 	return (
 		<div className='edit'>
-			<form>
+			<form className='form-control'>
 				<label htmlFor='title'>Title</label>
 				<input
 					onChange={handleChange}
