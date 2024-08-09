@@ -25,49 +25,51 @@ function Edit({ products = [], updateProducts, deleteProduct }) {
 	if (!product) return null
 
 	return (
-		<div className='edit'>
-			<form className='form-control'>
-				<label htmlFor='title'>Title</label>
-				<input
-					onChange={handleChange}
-					type='text'
-					id='title'
-					name='title'
-					value={formData.title}
-				/>
-				<label htmlFor='description'>Description</label>
-				<textarea
-					onChange={handleChange}
-					rows='5'
-					id='description'
-					name='description'
-					value={formData.description}
-				></textarea>
-				<label htmlFor='image'>Image</label>
-				<input
-					onChange={handleChange}
-					type='text'
-					id='image'
-					name='image'
-					value={formData.image}
-				/>
-				<label htmlFor='price'>Price</label>
-				<input
-					onChange={handleChange}
-					type='number'
-					id='price'
-					name='price'
-					value={formData.price}
-				/>
-				<div className='edit-btn-container'>
-					<div>
-						<a onClick={handleDeleteProduct}>Delete</a>
-						<a type='submit' onClick={handleSubmit}>
-							Save
-						</a>
+		<div>
+			<div className='edit'>
+				<form className='form-control'>
+					<label htmlFor='title'>Title</label>
+					<input
+						onChange={handleChange}
+						type='text'
+						id='title'
+						name='title'
+						value={formData.title}
+					/>
+					<label htmlFor='description'>Description</label>
+					<textarea
+						onChange={handleChange}
+						rows='5'
+						id='description'
+						name='description'
+						value={formData.description}
+					></textarea>
+					<label htmlFor='image'>Image</label>
+					<input
+						onChange={handleChange}
+						type='text'
+						id='image'
+						name='image'
+						value={formData.image}
+					/>
+					<label htmlFor='price'>Price</label>
+					<input
+						onChange={handleChange}
+						type='number'
+						id='price'
+						name='price'
+						value={formData.price}
+					/>
+					<div className='edit-btn-container'>
+						<div>
+							<a onClick={handleDeleteProduct}>Delete</a>
+							<a type='submit' onClick={handleSubmit}>
+								Save
+							</a>
+						</div>
 					</div>
-				</div>
-			</form>
+				</form>
+			</div>
 		</div>
 	)
 }
