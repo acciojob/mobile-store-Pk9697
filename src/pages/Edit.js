@@ -22,11 +22,11 @@ function Edit({ products = [], updateProducts, deleteProduct }) {
 		navigate('/admin')
 	}
 
-	if (!product) return null
+	// if (!product) return null
 
 	return (
-		<div>
-			<div className='edit'>
+		// <div>
+		// 	<div className='edit'>
 				<form className='form-control'>
 					<label htmlFor='title'>Title</label>
 					<input
@@ -69,8 +69,8 @@ function Edit({ products = [], updateProducts, deleteProduct }) {
 						</div>
 					</div>
 				</form>
-			</div>
-		</div>
+		// 	</div>
+		// </div>
 	)
 }
 
