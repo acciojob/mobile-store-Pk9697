@@ -1,13 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Product({ product = {} }) {
+	const navigate=useNavigate()
 	return (
-		<div className='product'>
+		<div className='product btn' onClick={() => navigate(`/products/${product.id}`)}>
 			<img src={product.image} alt={product.title} />
 			<h5>{product.title}</h5>
-            <p>Price: ${product.price}</p>
-            <Link className='btn' to={`/products/${product.id}`}>Buy</Link>
+			<p>Price: ${product.price}</p>
+			<Link to={`/products/${product.id}`}>Buy</Link>
 		</div>
 	)
 }
