@@ -59,7 +59,7 @@ function Edit({ products = [], updateProducts, deleteProduct }) {
 					name='price'
 					value={formData.price}
 				/>
-				<div className='col-12'>
+				<div className='edit-btn-container'>
 					<div>
 						<a onClick={handleDeleteProduct}>Delete</a>
 						<a type='submit' onClick={handleSubmit}>

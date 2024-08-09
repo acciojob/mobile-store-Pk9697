@@ -8,12 +8,16 @@ function Admin({ products = [] }) {
 			<ul>
 				{products.map((product) => (
 					<li key={product.id}>
-						<Link to={`/admin/products/${product.id}`}>
-							<div className='admin-product'>
-								<img src={product.image} alt={product.title} />
-								<h5>{product.title}</h5>
+						<div className='col-12'>
+							<div>
+								<Link to={`/admin/products/${product.id}`}>
+									<div className='admin-product'>
+										<img src={product.image} alt={product.title} />
+										<h5>{product.title}</h5>
+									</div>
+								</Link>
 							</div>
-						</Link>
+						</div>
 					</li>
 				))}
 			</ul>

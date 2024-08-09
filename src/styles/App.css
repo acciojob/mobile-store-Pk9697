@@ -189,13 +189,13 @@ img {
 	font-weight: bold;
 }
 
-.col-12 > div{
+.edit-btn-container > div{
 	display: flex;
 	justify-content: end;
 	gap: 1em;
 }
 
-.col-12 a {
+.edit-btn-container a {
 	padding: 0.5em 1.25em;
 	background-color: gray;
 	color: white;
